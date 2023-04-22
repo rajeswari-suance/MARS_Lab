@@ -1,0 +1,383 @@
+.profile li a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.header {
+    min-height: 60px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    position: fixed;
+    z-index: 1000;
+    box-shadow: 0 0 5px 5px rgba(255, 255, 255, 0.1);
+}
+
+.name {
+    font-size: 35px;
+    letter-spacing: 2px;
+    font-weight: bolder;
+    color: white;
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+.user {
+    height: 45px;
+    width: 45px;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    border-radius: 50%;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile {
+    position: absolute;
+    top: 62px;
+    color: black;
+    right: -100%;
+    width: 100%;
+    z-index: 100;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    font-weight: bolder;
+    opacity: 1;
+    transition: 0.3s linear;
+    box-shadow: 0 0 1px 1px rgba(255, 255, 255, 0.1);
+}
+
+#remove {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: black;
+    cursor: pointer;
+    background-color: white;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: 0.2s linear;
+}
+
+#remove:hover {
+    transform: scale(1.1);
+}
+
+.profile ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.profile ul li {
+    padding: 10px;
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-bottom: 1px solid transparent;
+    transition: 0.1s linear;
+}
+
+.profile ul li a {
+    color: white;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.profile ul li a:hover {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.profile ul li:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+input[type="text"] {
+    width: 400px;
+    outline: none;
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid transparent;
+    padding-left: 10px;
+    border-radius: 100px;
+    letter-spacing: 1px;
+}
+
+input[type="text"]::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+input[type="date"]{
+    background-color: #0080ff;
+    padding: 15px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    font-family: "Roboto Mono",monospace;
+    color: #ffffff;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+::-webkit-calendar-picker-indicator{
+    background-color: #ffffff;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.search {
+    width: 430px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    justify-content: space-evenly;
+}
+
+.search span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+}
+
+.main {
+    min-height: 100vh;
+    /* background-color: black; */
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.leftList {
+    height: 100vh;
+    display: flex;
+}
+
+.leftListContent {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    background-color: black;
+    height: 100vh;
+    width: 35px;
+    padding: 0 0 20px 0;
+    z-index: 500;
+    transition: 0.2s linear;
+    overflow-x: hidden;
+    box-shadow: 0 0 2px 2px rgba(255, 255, 255, 0.2);
+}
+
+.leftListContent ul {
+    margin-top: 50px;
+}
+
+.leftListContent ul li {
+    padding: 0 0 10px 0;
+    color: white;
+    font-size: 15px;
+}
+
+.leftListContent ul li span {
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+.leftListContent ul li a {
+    color: white;
+    padding: 0 0 0 10px;
+    text-decoration: none;
+}
+
+.leftListContent ul li:hover {
+    color: purple;
+}
+
+.leftListContent ul li a:hover {
+    color: purple;
+}
+
+.leftListContent ul hr {
+    width: 200px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid transparent;
+}
+
+#rightArrow,
+#leftArrow {
+    position: absolute;
+    top: 70px;
+    right: 5px;
+    color: white;
+}
+
+#rightArrow:hover,
+#leftArrow:hover {
+    color: purple;
+}
+
+#rightArrow span,
+#leftArrow span {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#leftArrow {
+    display: none;
+}
+
+.middle {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    align-items: center;
+    /* justify-content: space-evenly; */
+    min-height: 100vh;
+    margin-top: 30px;
+    margin-left: 50px;
+}
+
+.newsBox {
+    border: 1px solid transparent;
+    border-radius: 20px;
+    padding: 2px 10px;
+    margin: 5px 0;
+    text-align: justify;
+    transition: all 0.2s linear;
+    cursor: pointer;
+    color: white;
+    /* background-color: #e2d3c1; */
+    background-color: aliceblue;
+    width: 100%;
+}
+
+.newsBox hr {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid transparent;
+}
+
+.newsBox h3 {
+    font-size: 15px;
+}
+
+.newsBox p {
+    font-size: 13px;
+}
+
+.newsBox:hover {
+    transform: scale(1.01);
+}
+
+.rightNews {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 120px;
+}
+
+.temp {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    color: white;
+    font-size: 20px;
+}
+
+.temp .glyphicon-map-marker {
+    color: red;
+    cursor: pointer;
+}
+
+.glyphicon-cloud {
+    color: skyblue;
+}
+
+.mostSearch {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    width: 80%;
+}
+
+.mostSearch h3 {
+    color: white;
+}
+
+.mostSearch ul {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    justify-content: space-evenly;
+}
+
+.mostSearch ul li {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    margin: 5px;
+    border-radius: 100px;
+}
+
+.mostSearch ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.mostSearch ul li a:hover {
+    color: purple;
+}
+
+@media only screen and (max-width: 800px) {
+    input[type="text"] {
+        width: 300px;
+    }
+    .search {
+        width: 330px;
+    }
+    .user {
+        position: absolute;
+        top: 2px;
+        right: 2px;
+    }
+    .header {
+        min-height: 120px;
+    }
+    .leftList {
+        display: none;
+    }
+    .middle {
+        margin-left: 15px;
+        width: 90%;
+        margin-top: 120px;
+    }
+    .rightNews {
+        width: 90%;
+        margin-top: 20px;
+    }
+}
