@@ -25,4 +25,5 @@ const getTest = (request, response) => {
 
 module.exports = {
   getUsers,
+  getTest,
 };

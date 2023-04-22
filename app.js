@@ -18,7 +18,7 @@ app.set("view engine", "hbs");
 
 app.use(express.static(staticPath));
 app.get("/publications", db.getUsers);
-app.get("/test", "string");
+app.get("/test", db.getTest);
 
 app.listen(port, () => {
   console.log(`App running on port ${port}.`);
