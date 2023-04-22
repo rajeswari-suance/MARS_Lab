@@ -19,6 +19,9 @@ const getUsers = (request, response) => {
     }
   );
 };
+const getTest = (request, response) => {
+  response.send("test");
+};
 
 module.exports = {
   getUsers,
