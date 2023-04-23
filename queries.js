@@ -7,7 +7,7 @@ const pool = new Pool({
   port: 5432,
 });
 
-const getUsers = (request, response) => {
+const getPublications = (request, response) => {
   pool.query(
     "SELECT * FROM publications ORDER BY title ASC",
     (error, results) => {
@@ -24,6 +24,6 @@ const getTest = (request, response) => {
 };
 
 module.exports = {
-  getUsers,
+  getPublications,
   getTest,
 };
