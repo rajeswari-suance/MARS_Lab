@@ -17,7 +17,7 @@ const staticPath = path.join(__dirname, "public");
 app.set("view engine", "hbs");
 
 app.use(express.static(staticPath));
-app.get("/publications", db.getUsers);
+app.get("/publications", db.getPublications);
 app.get("/test", db.getTest);
 
 app.listen(port, () => {
